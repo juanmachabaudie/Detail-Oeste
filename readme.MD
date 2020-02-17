@@ -12,4 +12,4 @@ Sitios de Referencia:
 - http://www.carsunweb.com/
 - https://autodetail.com.ar/
 
-Estos sitios fueron elegidos como referencia ya que están relacionados con los productos brinda y los clientes que apunta Detail Oeste. Ademas, son sitios sobresalientes en cuanto a su estética y su funcionalidad.
+Estos sitios fueron elegidos como referencia ya que están relacionados con los productos que brinda y los clientes que apunta Detail Oeste. Ademas, son sitios sobresalientes en cuanto a su estética y su funcionalidad.
