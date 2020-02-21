@@ -7,38 +7,168 @@ body{
   font-family: 'Russo One', sans-serif;
 }
 
-.overlay {
-  height: 0;
-  width: 0;
+.fixedNav {
+  background-color: #3a3a3a;
   position: fixed;
-  background: rgba(255, 128, 128, 0.95);
   z-index: 1;
-  top: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  transition: 0.5s;
+  left: 20px;
+  top: 13px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.fixedNav i {
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.8;
+  color: whitesmoke;
 }
 
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  text-align: center;
-  margin: 20% auto;
-  
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
+/* The navigation links inside the overlay */
 .overlay a {
-    padding: 8px;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #929292;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #006cfad0;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*-----------------NavBar------------------*/
+
+.navbar{
+  background-color: #3a3a3a;
+  position: initial;
+}
+.navbar img{
+  width: 100%;
+}
+.navbar .row{
+  display: flex;
+  justify-content: space-around;
+}
+
+.sectionNav2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/*----------------Banner--------------------*/
+  
+.slideBanner{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color:black;
+}
+.slideBanner ul{
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  width: 300%;
+  animation: cambio 20s infinite alternate;
+}
+.slideBanner li{
+  width: 100%;
+  list-style: none;
+}
+.slideBanner img{
+  width: 99.5%;
+  margin-top: 1%;
+  margin-left: 0.5%;
+}
+
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+}
+
+  /*------------------footer---------------*/
+  
+  div.footer{
+    display: flex;
+    background-color:#000000;
+    width: 100%;
+    flex-direction: row;
+  }
+  
+  div.footer article{
+    padding: 5%;
+    width: 100%;
+  }
+  div.footer img{
+    width: 30%;
+  }
+  div.footer h2,p{
+    color: rgba(245, 245, 245, 0.863);
+    letter-spacing: 1px;
+  }
+  div.footer a{
+    font-size: 20px;
+    line-height: 2;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.closebtn {
-  float: right;
-}
-
-span {
-  margin: 4%;
-}
+    color: rgba(245, 245, 245, 0.863);
+  }
+  div.footer a:hover{
+    color: rgba(0, 102, 255, 0.829);
+  }
+  div.footer p{
+    font-size: 20px;
+  }

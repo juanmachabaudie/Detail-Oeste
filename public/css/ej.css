@@ -27,6 +27,9 @@
     text-decoration: none;
     font-family: 'Russo One', sans-serif;
   }
+  /*-------------------------------------------------------------------------------------------------*/
+  
+  
   
   /*------------------------------------------------------
   .site-nav{
@@ -70,7 +73,6 @@
     text-align: right;
     color: rgba(255, 255, 255, .4);
   }
-  ----------------------------------------------------*/
   
   .menu-toggle{
     display: inline-flex;
@@ -106,79 +108,12 @@
   .hamburger::after{
     transform: translateY(3px);
   }
+  ----------------------------------------------------*/
   
-  /*----------------Banner--------------------*/
-  
-  .slideBanner{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    background-color:black;
-  }
-  .slideBanner ul{
-    margin: 0%;
-    padding: 0%;
-    display: flex;
-    width: 300%;
-    animation: cambio 20s infinite alternate;
-  }
-  .slideBanner li{
-    width: 100%;
-    list-style: none;
-  }
-  .slideBanner img{
-    width: 99.5%;
-    margin-top: 1%;
-    margin-left: 0.5%;
-  }
-  
-  @keyframes cambio{
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-  
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-  
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-  }
-  
-  /*------------------footer---------------*/
-  
-  div.footer section{
-    display: flex;
-    background-color:#000000;
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-  }
-  
-  div.footer article{
-    padding: 5%;
-    width: 100%;
-  }
-  div.footer img{
-    width: 100%;
-  }
-  div.footer h2,p{
-    color: rgba(245, 245, 245, 0.863);
-    letter-spacing: 1px;
-  }
-  div.footer a{
-    font-size: 20px;
-    line-height: 2;
-    text-decoration: none;
-    color: rgba(245, 245, 245, 0.863);
-  }
-  div.footer a:hover{
-    color: rgba(0, 102, 255, 0.829);
-  }
-  div.footer p{
-    font-size: 20px;
-  }
+
   
   /*-----------------Media_Queries----------------------*/
-  
+  /*
   @media (min-width:700px){
   .menu-toggle{
       display: none;
@@ -209,3 +144,4 @@
   }
   
   }
+  */

@@ -1,6 +1,0 @@
-var btn = document.getElementById("toggle");
-btn.onclick = function () {
-    document.body.classList.toggle("open")
-}
-
-SACADO DE https://codemyui.com/fullscreen-overlay-navigation-menu/
