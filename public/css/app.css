@@ -10,12 +10,13 @@ body{
 .fixedNav {
   background-color: #3a3a3a;
   position: fixed;
-  z-index: 1;
-  left: 20px;
+  z-index: 10;
+  left: 10px;
   top: 13px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .fixedNav i {
   font-size: 25px;
@@ -24,6 +25,9 @@ body{
   text-align: center;
   line-height: 1.8;
   color: whitesmoke;
+}
+.fixedNav i:hover{
+  color: #006cfad0;
 }
 
 /* The Overlay (background) */
@@ -87,22 +91,24 @@ body{
 
 .navbar{
   background-color: #3a3a3a;
-  position: initial;
 }
-.navbar img{
+.nav2 img{
   width: 100%;
 }
-.navbar .row{
+.nav3 {
   display: flex;
-  justify-content: space-around;
-}
-
-.sectionNav2{
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: flex-end;
 }
-
+.nav3 i{
+  font-size: 30px;
+}
+#minicart{
+  color: whitesmoke;
+}
+#minicart:hover{
+  color: #006cfad0;
+}
 
 /*----------------Banner--------------------*/
   

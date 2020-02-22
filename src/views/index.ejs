@@ -19,6 +19,7 @@
   
 		<!-- Overlay content -->
 		<div class="overlay-content">
+			<label for="search"><i class="fas fa-search"></i></label><input id="search" type="search" placeholder="Buscar...">
 			<a href="#"><i class="fa fa-home site-nav--icon"></i> Productos</a>
 			<a href="#"><i class="fa fa-info site-nav--icon"></i> Servicios</a>
 			<a href="#"><i class="fa fa-pencil-alt site-nav--icon"></i> Turnos</a>
@@ -34,16 +35,18 @@
 		<span onclick="openNav()"><i class="fas fa-bars"></i></span>
 		</nav>
 
-		<div id= navbar class="navbar container-fluid">
+		<div class="navbar container-fluid">
 			<div class="row">
-				<section class="sectionNav1 col-3 col-lg-2">
+				<div class="nav1 col-4">
+				</div>
+				<div class="nav2 col-4">
 					<a href=""><img id="imgLogo" src="/images/Logo-txt.jpg" alt=""></a>
-				</section>
-				<section class="sectionNav2 col-3">
-					<label for="search"><i class="fas fa-search"></i></label>
-					<input id="search" type="search" placeholder="Buscar...">
-					<a href=""><i class="fas fa-shopping-cart"></i></a>
-				</section>	
+				</div>					
+				<div class="nav3 col-4">
+					<div class="minicart">
+						<a id="minicart" href="#"><i class="fas fa-shopping-cart"></i></a>
+					</div>
+				</div>					
 			</div>
 		</div>
 
