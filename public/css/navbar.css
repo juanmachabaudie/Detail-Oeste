@@ -1,0 +1,21 @@
+.navbar{
+    background-color: #3a3a3a;
+    margin-bottom: 5%;
+  }
+  .nav2 img{
+    width: 100%;
+  }
+  .nav3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .nav3 i{
+    font-size: 30px;
+  }
+  #minicart{
+    color: whitesmoke;
+  }
+  #minicart:hover{
+    color: #006cfad0;
+  }  

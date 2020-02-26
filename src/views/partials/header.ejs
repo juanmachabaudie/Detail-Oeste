@@ -1,0 +1,45 @@
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="/">Home</a>
+        <a href="/productos/">Productos</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/turnos">Turnos</a>
+        <a href="/nosotros">Nosotros</a>
+    </div>
+
+  </div>
+
+<nav class="fixedNav">
+  <!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"><i class="fas fa-bars"></i></span>
+</nav>
+
+<div class="navbar container-fluid" id="nav">
+
+    <div class="row">
+        <div class="nav1 col-4">
+        </div>
+        <div class="nav2 col-4">
+            <a href="/"><img id="imgLogo" src="/images/Logo-txt.jpg" alt=""></a>
+        </div>					
+        <div class="nav3 col-4">
+            <div class="minicart">
+                <a id="minicart" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>					
+    </div>
+
+    <div class="row">
+        <div class="search col-12">
+            <label for="search"><i class="fas fa-search"></i></label>
+            <input id="search" type="search" placeholder="Buscar...">
+        </div>
+    </div>
+    
+</div>

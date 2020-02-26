@@ -6,20 +6,16 @@ const router = express.Router();
 const mainController = require('../controllers/mainController');
 
 /* GET - home page. */
-router.get('/', mainController.root);
+router.get('/', mainController.home);
 
 /*-------- Others from main. -----------*/
 
-router.get('/servicios', (req, res)=>{
-    res.send('Bienvenidos a los servicios')
-});
+router.get('/carrito', mainController.carrito);
 
-router.get('/turnos', (req, res)=>{
-    res.send('Bienvenidos a los turnos')
-});
+router.get('/servicios', mainController.servicios);
 
-router.get('/nosotros', (req, res)=>{
-    res.send('Aquí tiene nuestra información.')
-});
+router.get('/turnos', mainController.turnos);
+
+router.get('/nosotros', mainController.nosotros);
 
 module.exports = router;
