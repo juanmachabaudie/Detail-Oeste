@@ -1,21 +1,25 @@
-.navbar{
+ #nav{
     background-color: #3a3a3a;
     margin-bottom: 5%;
+    padding: 10px;
   }
-  .nav2 img{
+  #imgLogo{
     width: 100%;
+    margin-bottom: 5%;
   }
-  .nav3 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .nav3 i{
-    font-size: 30px;
-  }
-  #minicart{
+  #minicart {
     color: whitesmoke;
+    font-size: 1.7em;
+    line-height: 2em;
   }
   #minicart:hover{
     color: #006cfad0;
-  }  
+  }
+  #search{
+    border-radius: 15px;
+    border: none;
+    width: 95%;
+  }
+  #search::placeholder{
+    color: rgb(206, 206, 206);
+  }

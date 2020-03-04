@@ -14,7 +14,8 @@ div.footer{
     width: 100%;
   }
   div.footer img{
-    width: 30%;
+    width: 100%;
+    border-radius: 30px;
   }
   div.footer h2,p{
     color: rgba(245, 245, 245, 0.863);

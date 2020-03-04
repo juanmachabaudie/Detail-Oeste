@@ -11,4 +11,4 @@ router.get('/crear', productosController.crear);
 
 router.get('/editar', productosController.editar);
 
-module.exports=router;
+module.exports = router;
