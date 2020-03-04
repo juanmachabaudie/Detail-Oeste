@@ -1,18 +1,39 @@
-<%- include('./partials/head')%>
+<%-include('./partials/head')%>
 
-<div class="container-fluid" id="nav">
+<%-include('./partials/header')%>
 
+<div class="container">
     <div class="row">
-        <div class="nav1 col-4">
+        <div class="col-12 col-md-6">
+            <img id="product" src="/images/producto.jpg" alt="toxic shine">
         </div>
-        <div class="nav2 col-4">
-            <a href="/"><img id="imgLogo" src="/images/Logo-txt.jpg" alt=""></a>
-        </div>					
-        <div class="nav3 col-4">
-            <div class="minicart">
-                <a id="minicart" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>					
+        <div class="col-12 col-md-6">
+            <p style="color:black;">Cera Golden Sean de Toxic Shine. Realza el brillo de tu carrocería aplicando después del lavado.</p>
+            <h2>$150</h2>
+            <section>
+                <h3>Tamaño:</h3>
+                    <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+            </section>
+            <section>
+                <h3>Cantidad:</h3>
+                    <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+            </section>
+            <br>
+            <button type="submit" class="btn btn-primary">Agregar al Carrito</button>
+        </div>
     </div>
-    
 </div>
+
+<%-include('./partials/footer')%>
+
+<%-include('./partials/foot')%>

@@ -20,3 +20,9 @@ body{
 .item-description, .item-price{
   margin: 0 20px;
 }
+
+/*--------------productsDetail-----------*/
+
+#product{
+  width: 100%;
+}
