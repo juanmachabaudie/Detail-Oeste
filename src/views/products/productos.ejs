@@ -1,8 +1,27 @@
-<%-include('./partials/head')%>
+<%-include('../partials/head')%>
 
-<%-include('./partials/header')%>
+<%-include('../partials/header')%>
 
-<div class="container">
+<h1>Listado de Productos</h1>
+
+<% if (productos.length === 0) { %>
+    <h5>No hay Productos Para Mostrar</h5>
+<% } else { %>
+    <ul>
+        <% productos.forEach(unProducto => { %>
+        <li>
+            <strong>ID:</strong><%= unProducto.id %>
+            <strong>Nombre:</strong><%= unProducto.nombre %>
+            <strong>Precio: $</strong><%= unProducto.precio %>
+            <a href="/productos/detalle/<%= unProducto.id %> ">Ver más</a>
+        </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+
+<!--
+    <div class="container">
     <div class="row">
         <a href="/productos/detalle">
             <div class="aboutItem col-sm-12 col-md-6">
@@ -58,7 +77,7 @@
         </a>    
     </div>
 </div>
+-->
+<%-include('../partials/footer')%>
 
-<%-include('./partials/footer')%>
-
-<%-include('./partials/foot')%>
+<%-include('../partials/foot')%>

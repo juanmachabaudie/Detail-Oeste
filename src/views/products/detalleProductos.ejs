@@ -1,6 +1,6 @@
-<%-include('./partials/head')%>
+<%-include('../partials/head')%>
 
-<%-include('./partials/header')%>
+<%-include('../partials/header')%>
 
 <div class="container">
     <div class="row">
@@ -8,15 +8,13 @@
             <img id="product" src="/images/producto.jpg" alt="toxic shine">
         </div>
         <div class="col-12 col-md-6">
-            <p style="color:black;">Cera Golden Sean de Toxic Shine. Realza el brillo de tu carrocería aplicando después del lavado.</p>
-            <h2>$150</h2>
+            <h3>Nombre:<%= productos.nombre %> </h3>
+            <h3>Marca:<%= productos.marca.nombre %> </h3>
+            <h2>$<%= productos.precio %> </h2>
             <section>
-                <h3>Tamaño:</h3>
+                <h3>Presentación:</h3>
                     <select class="form-control" id="sel1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                        <option value="">1</option>
                     </select>
             </section>
             <section>
@@ -34,6 +32,6 @@
     </div>
 </div>
 
-<%-include('./partials/footer')%>
+<%-include('../partials/footer')%>
 
-<%-include('./partials/foot')%>
+<%-include('../partials/foot')%>

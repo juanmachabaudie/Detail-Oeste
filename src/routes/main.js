@@ -16,6 +16,9 @@ router.get('/servicios', mainController.servicios);
 
 router.get('/turnos', mainController.turnos);
 
-router.get('/nosotros', mainController.nosotros);
+router.get('/logIn', mainController.logIn);
+router.post('/logIn', mainController.processLogIn);
+
+/*router.get('/nosotros', mainController.nosotros);*/
 
 module.exports = router;

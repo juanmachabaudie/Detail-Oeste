@@ -5,10 +5,6 @@ const router = express.Router();
 
 router.get('/', productosController.listado);
 
-router.get('/detalle', productosController.detalle);
-
-router.get('/crear', productosController.crear);
-
-router.get('/editar', productosController.editar);
+router.get('/detalle/:id', productosController.detalle);
 
 module.exports = router;

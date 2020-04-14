@@ -1,15 +1,54 @@
+const db = require('../database/models/');
+const Productos = db.productos
+const Marcas = db.marcas
+
 let adminContoller = {
 
     main:(req, res)=>{
-        res.render('adminProfile');
+        res.render('admin/adminProfile');
     },
-    signIn:(req, res)=>{
-        res.render('adminSignIn');
-    },
-    logIn:(req, res)=>{
-        res.render('adminLogIn');
-    }
 
+    listadoProductos: (req,res)=>{
+
+        Productos
+        .findAll()
+        .then(productos => {
+            return res.render('products/productos',{
+                productos
+            });
+        })
+
+    },
+
+    detalleProductos: (req, res)=>{
+        res.render('products/detalleProductos')
+    },
+
+    crearProducto:(req, res)=>{
+        Marcas
+        .findAll()
+        .then(marcas => {
+            res.render('admin/crearProductos',{
+                title:'Product Create',
+                marcas
+            });
+        })
+        .catch(error => res.send(error));
+    },
+
+    editarProducto:(req, res)=>{
+        res.render('admin/editarProductos');
+    },
+
+    guardarProducto:(req, res)=>{
+        Productos
+        .create(req.body)
+        .then(producto => {
+            return res.redirect(`/productos/detalle/${producto.id}`);
+            })
+        .catch(error => res.send(error))
+    },
+    
 };
 
 module.exports = adminContoller;

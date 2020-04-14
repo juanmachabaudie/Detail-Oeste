@@ -4,22 +4,29 @@ const path = require('path');
 
 const controller = {
 	home: (req, res) => {
-		res.render('index')
+		res.render('main/index')
 	},
 	carrito: (req, res)=>{
-		res.render('carrito')
+		res.render('main/carrito')
 	},
 	servicios: (req, res)=>{
-		res.render('servicios')
+		res.render('main/servicios')
 	},
 
 	turnos: (req, res)=>{
-		res.render('turnos')
+		res.render('main/turnos')
 	},
 
 	nosotros: (req, res)=>{
-		res.render('nosotros')
-	}
+		res.render('main/nosotros')
+	},
+
+	logIn:(req, res)=>{
+        res.render('main/LogIn');
+    },
+    processLogIn:(req, res)=>{
+        res.redirect("/");  //???????????????????????????
+    },
 
 };
 

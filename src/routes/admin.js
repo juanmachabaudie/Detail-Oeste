@@ -6,8 +6,13 @@ const adminController = require('../controllers/adminController');
 
 router.get('/', adminController.main);
 
-router.get('/signIn', adminController.signIn);
+router.get('/productos', adminController.listadoProductos);
 
-router.get('/logIn', adminController.logIn);
+// router.get('/productos/detalle', adminController.detalleProductos);
+
+router.get('/productos/crear', adminController.crearProducto);
+router.post('/productos/crear', adminController.guardarProducto);
+
+router.get('/productos/editar', adminController.editarProducto);
 
 module.exports=router;

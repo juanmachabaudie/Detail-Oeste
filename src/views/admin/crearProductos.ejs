@@ -1,0 +1,32 @@
+<%-include('../partials/head')%>
+
+<%-include('../partials/header')%>
+
+<h1>Crear Producto</h1>
+<form action="/admin/productos/crear" method="POST">
+    <div>
+        <label> Nombre:</label><br>
+        <input type="text" name="nombre">
+        <br><br>
+    </div>
+    <div>
+        <label> Precio:</label><br>
+        <input type="text" name="precio">
+        <br><br>
+    </div>
+    <div>
+        <label> Marca:</label><br>
+        <select name="id_marca">
+            <option value="">Elegí una Marca</option>
+            <% marcas.forEach(unaMarca => { %>
+            <option value="<%=unaMarca.id%>"><%=unaMarca.nombre%></option>
+            <% }) %>
+        </select>
+        <br><br>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+
+<%-include('../partials/footer')%>
+
+<%-include('../partials/foot')%>

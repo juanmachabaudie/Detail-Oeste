@@ -30,7 +30,7 @@ const rutasProductos = require('./routes/productos.js');
 app.use('/productos', rutasProductos);
 
 const rutaAdmin = require('./routes/admin.js');
-app.use('/admin', rutaAdmin);
+app.use('/admin', rutaAdmin, rutasProductos);
 
 
 
