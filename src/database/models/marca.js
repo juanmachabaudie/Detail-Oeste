@@ -2,31 +2,31 @@ module.exports = (sequelize, DataTypes) => {
 
     let alias = 'marcas';
     let columns = {
-        id:{
+        id: {
             type: DataTypes.INTEGER,
-            allowNull:false,
-            primaryKey:true,
-            autoIncrement:true,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
         },
-        nombre:{
+        nombre: {
             type: DataTypes.STRING,
-            allowNull:false,
+            allowNull: false,
         },
     };
     let config = {
-        tableName:'marcas',
-        timestamps:false,
+        tableName: 'marcas',
+        timestamps: false,
     };
 
     const marca = sequelize.define(alias, columns, config);
 
     marca.associate = (modelos) => {
-		// hasMany
-		marca.hasMany(modelos.productos, {
-			as: 'productos',
-			foreignKey: 'id_marca'
+        // hasMany
+        marca.hasMany(modelos.productos, {
+            as: 'productos',
+            foreignKey: 'id_marca'
         });
     }
-    
+
     return marca;
 }

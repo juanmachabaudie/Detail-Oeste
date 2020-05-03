@@ -36,10 +36,6 @@ let adminContoller = {
         .catch(error => res.send(error));
     },
 
-    editarProducto:(req, res)=>{
-        res.render('admin/editarProductos');
-    },
-
     guardarProducto:(req, res)=>{
         Productos
         .create(req.body)
@@ -48,6 +44,12 @@ let adminContoller = {
             })
         .catch(error => res.send(error))
     },
+
+    editarProducto:(req, res)=>{
+        res.render('admin/editarProductos');
+    },
+
+    
     
 };
 
