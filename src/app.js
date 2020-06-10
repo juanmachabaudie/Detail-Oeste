@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
+const session = require('express-session');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
+app.use(session({secret:'Secreto!!!'}));
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
@@ -29,9 +31,11 @@ app.use('/', mainRouter);
 const rutasProductos = require('./routes/productos.js');
 app.use('/productos', rutasProductos);
 
+const rutaUsers = require('./routes/users.js');
+app.use('/', rutaUsers);
+
 const rutaAdmin = require('./routes/admin.js');
 app.use('/admin', rutaAdmin, rutasProductos);
-
 
 
 // ************ DON'T TOUCH FROM HERE ************

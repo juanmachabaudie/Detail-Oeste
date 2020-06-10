@@ -3,11 +3,11 @@
   margin: 0;
 }
 body{
-  background: whitesmoke;
+  background:white;
   font-family: 'Russo One', sans-serif;
 }
 
-/*----------------products----------------*/
+/*----------------Products----------------*/
 
 .aboutItem{
   display: flex;
@@ -21,20 +21,46 @@ body{
   margin: 0 20px;
 }
 
-/*----------------productsDetail----------------*/
+/*----------------ProductsDetail----------------*/
 
 #product{
   width: 100%;
 }
 
-/*----------------adminLogin----------------*/
+/*----------------AddProduct----------------*/
 
-.card{
-  height: 370px;
+.form-card{
+  background-color: #3a3a3a;
+  border-radius: 25px;
+  width: 100%;
   margin-top: auto;
   margin-bottom: auto;
-  width: 400px;
+}
+.card-header{
+  color: white;
+}
+.form-row label{
+  color: white;
+}
+.form-row{
+  padding: 3%;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+  height: 270px;
+  width: 100%;
+}
+
+
+/*----------------Login----------------*/
+
+.card{
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
   background-color: #3a3a3a;
+  border-radius: 25px;
   }
 
 .social_icon span{
@@ -57,7 +83,7 @@ body{
   cursor: pointer;
   }
   
-  .card-header h3{
+  .card-header{
   color: white;
   }
   
@@ -92,13 +118,13 @@ body{
   margin-right: 5px;
   }
   
-  .login_btn{
+  .submit_btn{
   color: black;
   background-color:#006cfad0;
-  width: 100px;
+  height: 3%;
   }
   
-  .login_btn:hover{
+  .submit_btn:hover{
   color: black;
   background-color:rgb(255, 18, 18);
   }

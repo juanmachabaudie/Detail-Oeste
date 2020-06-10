@@ -1,11 +1,15 @@
  #nav{
     background-color: #3a3a3a;
     margin-bottom: 5%;
-    padding: 10px;
+    padding: 10px 15px;
   }
   #imgLogo{
     width: 100%;
     margin-bottom: 5%;
+  }
+  .minicart{
+    display: flex;
+    justify-content: center;
   }
   #minicart {
     color: whitesmoke;
@@ -15,10 +19,17 @@
   #minicart:hover{
     color: #006cfad0;
   }
-  #search{
+  .fa-search:before {
+    content: "\f002";
+    position: absolute;
+    right: 35px;
+    top: 6px;
+  }
+  #search {
     border-radius: 15px;
     border: none;
-    width: 95%;
+    width: 100%;
+    text-align: center;
   }
   #search::placeholder{
     color: rgb(206, 206, 206);

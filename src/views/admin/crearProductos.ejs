@@ -2,30 +2,79 @@
 
 <%-include('../partials/header')%>
 
-<h1>Crear Producto</h1>
-<form action="/admin/productos/crear" method="POST">
-    <div>
-        <label> Nombre:</label><br>
-        <input type="text" name="nombre">
-        <br><br>
+<div class="container">
+    <div class="form-card">
+        <h2 class="card-header">Crear Producto</h2>
+        <form action="/admin/productos/crear" method="POST" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div>
+                        <label> Marca:</label><br>
+                        <select class="custom-select" name="id_marca">
+                            <option value="">Elegí una Marca</option>
+                            <% marcas.forEach(unaMarca => { %>
+                            <option value="<%=unaMarca.id%>"><%=unaMarca.nombre%></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div>
+                        <label> Nombre:</label><br>
+                        <input class="form-control" type="text" name="nombre">
+                    </div>
+                    <div>
+                        <label> Categoría:</label><br>
+                        <select class="custom-select" name="id_categoria">
+                            <option value="">Elegí una Categoría</option>
+                            <% categorias.forEach(unaCategoria => { %>
+                            <option value="<%=unaCategoria.id%>"><%=unaCategoria.tipo%></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div>
+                        <label> Clasificación:</label><br>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="clasificacion_int"
+                                name="clasificacion_int"> <label class="custom-control-label"
+                                for="clasificacion_int">Interior</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="clasificacion_ext"
+                                name="clasificacion_ext"> <label class="custom-control-label"
+                                for="clasificacion_ext">Exterior</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label> Presentación:</label><br>
+                        <input class="form-control" type="text" name="presentacion">
+                    </div>
+                    <div>
+                        <label> Precio:</label><br>
+                        <input class="form-control" type="text" name="precio">
+                    </div>
+                    <div>
+                        <label> Stock:</label><br>
+                        <input class="form-control" type="number" name="stock">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div>
+                        <label> Descripción:</label><br>
+                        <textarea name="descripcion" rows="10" cols="40"
+                            placeholder="Escribí una descripción."></textarea>
+                    </div>
+                    <label>Imágenes:</label><br>
+                    <input type="file" name="producto">
+                    <input type="file" name="producto">
+                    <input type="file" name="producto">
+                    <input type="file" name="producto">
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn submit_btn">
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div>
-        <label> Precio:</label><br>
-        <input type="text" name="precio">
-        <br><br>
-    </div>
-    <div>
-        <label> Marca:</label><br>
-        <select name="id_marca">
-            <option value="">Elegí una Marca</option>
-            <% marcas.forEach(unaMarca => { %>
-            <option value="<%=unaMarca.id%>"><%=unaMarca.nombre%></option>
-            <% }) %>
-        </select>
-        <br><br>
-    </div>
-    <button type="submit">Guardar</button>
-</form>
+</div>
 
 <%-include('../partials/footer')%>
 
