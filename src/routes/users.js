@@ -34,4 +34,6 @@ router.post('/logIn', [
         
 ], usersController.processLogIn);
 
+router.get('/profile', usersController.profile);
+
 module.exports = router;

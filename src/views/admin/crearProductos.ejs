@@ -62,11 +62,15 @@
                         <textarea name="descripcion" rows="10" cols="40"
                             placeholder="Escribí una descripción."></textarea>
                     </div>
-                    <label>Imágenes:</label><br>
-                    <input type="file" name="producto">
-                    <input type="file" name="producto">
-                    <input type="file" name="producto">
-                    <input type="file" name="producto">
+                    <label>Imágenes:</label>                   
+                    <div class="form-row">
+                        <div id="add-photo-container">
+                            <div class="add-new-photo first" id="add-photo">
+                                <span><i class="fas fa-camera"></i></span>
+                            </div>
+                            <input type="file" multiple id="add-new-photo" name="images[]">
+                        </div>
+                    </div>
                     <div class="form-group">
                         <input type="submit" value="Guardar" class="btn submit_btn">
                     </div>

@@ -72,6 +72,9 @@ const usersController = {
             return res.render('users/LogIn', { errors: errors.errors })
         }
     },
+    profile:(req, res) => {
+        res.render('users/profile');
+    }
 
 };
 
