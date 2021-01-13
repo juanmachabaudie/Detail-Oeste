@@ -1,6 +1,6 @@
 Detail Oeste
 
-~ Detail Oeste es una plataforma online donde podras encontrar diferentes procutos y servicios para tu auto. Sirve para facilitarle la compra a los clientes y ayudar al owner con la organización.
+~ Detail Oeste es una plataforma online donde podras encontrar diferentes productos y servicios para tu auto. Sirve para facilitarle la compra a los clientes y ayudar al owner con la organización.
 ~ Hay una gran variedad de productos. Desde shampoo para la carroceria, hasta limpiador de llantas y tambien se podra tomar turnos para los diferentes servicios.
 ~ Nos enfocamos en clientes fanaticos de la estetica vehicular que cuidan sus autos como reliquias.
 
